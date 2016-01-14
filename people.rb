@@ -5,7 +5,7 @@ class Person
     @person_name = person_name
   end
 
-  def greeting(person_name)
+  def greeting
    puts "Hi, my name is #{@person_name}"
   end
 end
@@ -23,6 +23,13 @@ class Instructor < Person
 end
 
 chris = Instructor.new("Chris")
-
-chris.greeting(@person_name)
+chris.greeting
 chris.teach
+
+cristina = Student.new("Cristina")
+cristina.greeting
+cristina.learn
+
+#cristina.teach
+#This cannot be called because the "student" and "instructor classes are
+# next to each other on the hierarchy, one does not refer to the other."
