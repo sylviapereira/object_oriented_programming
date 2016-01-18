@@ -7,20 +7,11 @@ class Rover
     @direction = direction.to_s.upcase
   end
 
-#  def get_start
-#    puts "Rover initial start position: (x y N/E/S/W)"
-#    x, y, d = gets.chomp.split(" ")
-#  end
-
-
-
   def read_instruction(chr)
     if @direction == "N"
       if chr == "L"
-#        @x_co -= 1
         @direction = "W"
       elsif chr == "R"
-  #      @x_co += 1
         @direction = "E"
       else chr == "M"
         @y_co += 1
@@ -28,10 +19,8 @@ class Rover
 
     elsif @direction == "E"
       if chr == "L"
-#        @y_co += 1
         @direction = "N"
       elsif chr == "R"
-#        @y_co -= 1
         @direction = "S"
       else chr == "M"
         @x_co += 1
@@ -39,10 +28,8 @@ class Rover
 
     elsif @direction == "S"
       if chr == "L"
-#        @x_co += 1
         @direction = "E"
       elsif chr == "R"
-#        @x_co -= 1
         @direction = "W"
       else chr == "M"
         @y_co -= 1
@@ -50,10 +37,8 @@ class Rover
 
     else @direction == "W"
       if chr == "L"
-#        @y_co -= 1
         @direction = "S"
       elsif chr == "R"
-#      @y_co += 1
         @direction = "N"
       else chr == "M"
         @x_co -= 1
